@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiangjin Yin - Homepage</title>
+    <style>
+        :root {
+            --primary-color: #003366; /* 经典学术深蓝 */
+            --secondary-color: #555;
+            --accent-color: #e67e22; /* 强调色 */
+            --bg-color: #fafafa;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: #333;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 30px;
+        }
+
+        h1 { color: var(--primary-color); margin-bottom: 10px; }
+        h2 { 
+            color: var(--primary-color); 
+            font-size: 1.5rem; 
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* News Section */
+        .news-list { list-style: none; padding: 0; }
+        .news-list li { margin-bottom: 12px; padding-left: 15px; border-left: 3px solid var(--accent-color); }
+        .date-tag { font-weight: bold; color: var(--secondary-color); margin-right: 10px; }
+
+        /* Experience Section */
+        .exp-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .exp-date { width: 180px; font-weight: 600; color: var(--secondary-color); flex-shrink: 0; }
+        .exp-content { display: flex; align-items: center; }
+        .logo { height: 24px; margin-right: 12px; }
+
+        /* Publication Section */
+        .pub-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+        .pub-title { font-weight: bold; color: var(--primary-color); display: block; margin-bottom: 5px; }
+        .pub-venue { color: #d35400; font-weight: 600; font-style: italic; }
+        .author-self { text-decoration: underline; font-weight: 600; }
+
+        /* Services & Awards */
+        .grid-section { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        @media (max-width: 768px) {
+            .grid-section { grid-template-columns: 1fr; gap: 20px; }
+            .exp-item { flex-direction: column; }
+            .exp-date { margin-bottom: 5px; }
+        }
+
+        footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Jiangjin Yin (尹江津)</h1>
+        <p>
+            Assistant Professor at the <a href="#">School of Artificial Intelligence, Shandong University</a>, 
+            and a member of the <a href="#">General Artificial Intelligence Laboratory (SDU GAIL)</a>.
+        </p>
+        <p><strong>Research Interests:</strong> Reinforcement Learning, Multi-agent Systems, and LLM Agents.</p>
+        <p><strong>Email:</strong> <a href="mailto:zhiwei_xu@sdu.edu.cn">zhiwei_xu@sdu.edu.cn</a></p>
+    </header>
+
+    <section>
+        <h2>🔥 News</h2>
+        <ul class="news-list">
+            <li><span class="date-tag">2026.02</span> One paper accepted to <strong>ICAPS 2026</strong>! 🎉</li>
+            <li><span class="date-tag">2026.01</span> One first-author paper accepted to <strong>ICLR 2026</strong>!</li>
+            <li><span class="date-tag">2025.12</span> One paper accepted to <strong>AAMAS 2026</strong>!</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>📖 Experience</h2>
+        <div class="exp-item">
+            <span class="exp-date">2024.07 - Present</span>
+            <div class="exp-content">
+                <img src="sdu_logo.png" alt="SDU" class="logo">
+                <span>Assistant Professor, <strong>Shandong University</strong></span>
+            </div>
+        </div>
+        <div class="exp-item">
+            <span class="exp-date">2019.09 - 2024.06</span>
+            <div class="exp-content">
+                <img src="cas_logo.png" alt="CAS" class="logo">
+                <span>Ph.D., <strong>Institute of Automation, CAS</strong>. Advisor: Prof. Guoliang Fan</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>📝 Selected Publications</h2>
+        <div class="pub-card">
+            <span class="pub-title">QSIM: Mitigating Overestimation in Multi-Agent Reinforcement Learning via Action Similarity Weighted Q-Learning</span>
+            <span class="pub-venue">ICAPS 2026</span>. Yuanjun Li, Bin Zhang, ..., <span class="author-self">Zhiwei Xu</span>.
+            <div style="margin-top: 8px;">
+                [<a href="#">Arxiv</a>] [<a href="#">Code</a>]
+            </div>
+        </div>
+        </section>
+
+    <div class="grid-section">
+        <section>
+            <h2>💻 Academic Services</h2>
+            <p style="font-size: 0.95rem;">
+                <strong>PC Member / Reviewer:</strong><br>
+                NeurIPS, ICLR, ICML, AAAI, IJCAI, AAMAS.
+            </p>
+        </section>
+        <section>
+            <h2>🏅 Honors</h2>
+            <ul style="padding-left: 20px; font-size: 0.95rem;">
+                <li>2025: Excellent PhD Thesis Award (Runner-up)</li>
+                <li>2023: National Scholarship (Doctoral)</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 Zhiwei Xu | Updated: Mar 2026
+    </footer>
+</div>
+
+</body>
+</html>

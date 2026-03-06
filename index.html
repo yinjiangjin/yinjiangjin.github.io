@@ -65,7 +65,8 @@
             display: flex;
             margin-bottom: 15px;
         }
-        .exp-date { width: 220px; font-weight: bold; color: var(--secondary-color); flex-shrink: 0; }
+        .exp-date { width: 180px; font-weight: bold; color: var(--secondary-color); flex-shrink: 0; }
+        .bilingual-text { display: block; font-size: 0.95rem; color: #444; }
 
         .pub-list { padding-left: 0; list-style: none; }
         .pub-item {
@@ -75,13 +76,23 @@
             margin-bottom: 12px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
             border: 1px solid #eee;
+            position: relative;
         }
         .pub-item:hover { border-color: var(--accent-color); }
+        .pub-year-label { font-weight: bold; color: var(--accent-color); margin-right: 8px; }
         .pub-title { font-weight: 600; color: #222; display: block; margin-bottom: 4px; }
         .pub-venue { color: #d35400; font-weight: 500; font-style: italic; }
         .author-self { text-decoration: underline; font-weight: bold; }
 
         .grid-section { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+        .recruitment-box {
+            background-color: #fff8f0;
+            border: 1px solid #ffd8a8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
 
         @media (max-width: 768px) {
             .exp-item { flex-direction: column; }
@@ -99,14 +110,25 @@
         <div class="header-content">
             <h1>Jiangjin Yin (尹江津)</h1>
             <div style="margin-bottom: 15px;">
-                <span class="title-badge">Chutian Scholar of Hubei Province</span>
-                <span class="title-badge">Ph.D. Supervisor</span>
+                <span class="title-badge">Chutian Scholar</span>
+                <span class="title-badge">Ph.D. Supervisor (博士生导师)</span>
             </div>
-            <p style="font-size: 1.1rem; margin: 5px 0;">
+            
+            <p style="font-size: 1.05rem; margin: 5px 0;">
                 Associate Professor, <strong>College of Informatics, Huazhong Agricultural University</strong><br>
-                Deputy Director, <strong>Hubei Agricultural Big Data Research Center</strong>
+                <span class="bilingual-text">华中农业大学 信息学院 副研究员</span>
             </p>
-            <p><strong>Research Interests:</strong> Reinforcement Learning (RL), Multi-agent Systems (MAS), LLM Agents, RFID Sensing & IoT</p>
+            <p style="font-size: 1.05rem; margin: 5px 0;">
+                Deputy Director, <strong>Hubei Agricultural Big Data Research Center</strong><br>
+                <span class="bilingual-text">湖北省农业大数据中心 副主任</span>
+            </p>
+            
+            <p style="margin-top: 15px;">
+                <strong>Research Interests / 研究方向:</strong><br>
+                Reinforcement Learning (RL), Multi-agent Systems (MAS), LLM Agents, RFID Sensing & IoT<br>
+                <span class="bilingual-text">强化学习、多智能体系统、大模型智能体、RFID感知与物联网</span>
+            </p>
+            
             <p><strong>Email:</strong> <a href="mailto:jiangjin@mail.hzau.edu.cn">jiangjin@mail.hzau.edu.cn</a></p>
         </div>
     </header>
@@ -114,27 +136,43 @@
     <section>
         <h2>🔥 News</h2>
         <ul style="list-style: none; padding: 0;">
-
             <li style="margin-bottom: 10px; padding-left: 15px; border-left: 3px solid var(--highlight-color);">
-                One first-author paper accepted to <strong>ICML 2025</strong>!
+                <strong>[2025]</strong> One paper accepted to <strong>ICML 2025</strong>!
             </li>
         </ul>
     </section>
 
     <section>
-        <h2>📖 Experience</h2>
+        <h2>📢 Recruitment / 招生信息</h2>
+        <div class="recruitment-box">
+            <p><strong>English:</strong> I am looking for 2-3 motivated undergraduate students and 1 graduate student every year. Students who are interested in AI, Reinforcement Learning, or IoT are welcome to apply!</p>
+            <p><strong>中文：</strong> 本课题组每年招收 <strong>2-3 名本科生</strong>及 <strong>1 名研究生</strong>。欢迎对人工智能、强化学习、物联网等方向感兴趣并勇于挑战的同学踊跃报名联系！</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>📖 Experience / 经历</h2>
         <ul class="exp-list">
             <li class="exp-item">
                 <span class="exp-date">2022.07 - Present</span>
-                <span>Associate Professor / Ph.D. Supervisor, <strong>Huazhong Agricultural University</strong></span>
+                <span>
+                    Associate Professor, <strong>Huazhong Agricultural University</strong>
+                    <span class="bilingual-text">华中农业大学，副研究员</span>
+                </span>
             </li>
             <li class="exp-item">
                 <span class="exp-date">2015.09 - 2021.11</span>
-                <span>Ph.D. in Computer Science, <strong>Hunan University</strong></span>
+                <span>
+                    Ph.D. in Computer Science, <strong>Hunan University</strong>
+                    <span class="bilingual-text">湖南大学，计算机科学与技术，博士</span>
+                </span>
             </li>
             <li class="exp-item">
                 <span class="exp-date">2011.09 - 2015.07</span>
-                <span>B.S. in Computer Science, <strong>Guilin University of Electronic Technology</strong></span>
+                <span>
+                    B.S. in Computer Science, <strong>Guilin University of Electronic Technology</strong>
+                    <span class="bilingual-text">桂林电子科技大学，计算机科学与技术，学士</span>
+                </span>
             </li>
         </ul>
     </section>
@@ -145,22 +183,27 @@
         <h3>Reinforcement Learning & AI Agents</h3>
         <div class="pub-list">
             <div class="pub-item">
+                <span class="pub-year-label">[2025]</span>
                 <span class="pub-title">Reidentify: Context-Aware Identity Generation for Contextual Multi-Agent Reinforcement Learning</span>
                 <span class="pub-venue">ICML</span>. Z. Xu, K. Hu, X. Xin, W. Meng, Y. Shi, H. Mao, B. Zhang, D. Li, and <span class="author-self">J. Yin</span>.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2025]</span>
                 <span class="pub-title">Ngent: Next-generation ai agents must integrate multi-domain abilities to achieve artificial general intelligence</span>
                 <span class="pub-venue">arXiv preprint</span>. Z. Li, H. Mao, <span class="author-self">J. Yin</span>, M. Xing, Z. Xu, Y. Zhang, and Y. Xiao.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2024]</span>
                 <span class="pub-title">Beyond local views: Global state inference with diffusion models for cooperative multi-agent reinforcement learning</span>
                 <span class="pub-venue">arXiv preprint</span>. Z. Xu, H. Mao, N. Zhang, X. Xin, P. Ren, D. Li, B. Zhang, G. Fan, Z. Chen, and <span class="author-self">J. Yin</span>.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2023]</span>
                 <span class="pub-title">Pdit: Interleaving perception and decision-making transformers for deep reinforcement learning</span>
-                <span class="pub-venue">arXiv preprint</span>. H. Mao, R. Zhao, Z. Li, Z. Xu, H. Chen, Y. Chen, B. Zhang, Z. Xiao, J. Zhang, and <span class="author-self">J. Yin</span>.
+                <span class="pub-venue">AAMAS</span>. H. Mao, R. Zhao, Z. Li, Z. Xu, H. Chen, Y. Chen, B. Zhang, Z. Xiao, J. Zhang, and <span class="author-self">J. Yin</span>.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2022]</span>
                 <span class="pub-title">Robust multi-agent reinforcement learning for noisy environments</span>
                 <span class="pub-venue">Peer-to-Peer Networking and Applications</span>. X. Chen, X. Liu, C. Luo, and <span class="author-self">J. Yin</span>.
             </div>
@@ -169,46 +212,55 @@
         <h3>RFID Systems & IoT</h3>
         <div class="pub-list">
             <div class="pub-item">
+                <span class="pub-year-label">[2024]</span>
                 <span class="pub-title">Efficient missing key tag identification in large-scale RFID systems: An iterative verification and selection method</span>
-                <span class="pub-venue">IEEE Transactions on Mobile Computing (TMC)</span>. <span class="author-self">J. Yin</span>, X. Xie, H. Mao, and S. Guo.
+                <span class="pub-venue">IEEE TMC</span>. <span class="author-self">J. Yin</span>, X. Xie, H. Mao, and S. Guo.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2024]</span>
                 <span class="pub-title">Parallel Missing Tag Identification for Anonymous Multiple Users RFID Systems</span>
                 <span class="pub-venue">IEEE SECON</span>. <span class="author-self">J. Yin</span>, H. Mao, R. Zhu, and S. Xu.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2023]</span>
                 <span class="pub-title">Receive only necessary: Efficient tag category identification in large-scale RFID systems</span>
-                <span class="pub-venue">IEEE Transactions on Mobile Computing (TMC)</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, K. Li, and S. Guo.
+                <span class="pub-venue">IEEE TMC</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, K. Li, and S. Guo.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2022]</span>
                 <span class="pub-title">Time efficient tag searching in large-scale RFID systems: A compact exclusive validation method</span>
-                <span class="pub-venue">IEEE Transactions on Mobile Computing (TMC)</span>. X. Liu, <span class="author-self">J. Yin</span>, J. Liu, S. Zhang, and B. Xiao.
+                <span class="pub-venue">IEEE TMC</span>. X. Liu, <span class="author-self">J. Yin</span>, J. Liu, S. Zhang, and B. Xiao.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2021]</span>
                 <span class="pub-title">Time-efficient target tags information collection in large-scale RFID systems</span>
-                <span class="pub-venue">IEEE Transactions on Mobile Computing (TMC)</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, B. Xiao, and B. Ou.
+                <span class="pub-venue">IEEE TMC</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, B. Xiao, and B. Ou.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2019]</span>
                 <span class="pub-title">Vital signs monitoring with RFID: Opportunities and challenges</span>
                 <span class="pub-venue">IEEE Network</span>. X. Liu, <span class="author-self">J. Yin</span>, Y. Liu, S. Zhang, S. Guo, and K. Wang.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2018]</span>
                 <span class="pub-title">Range-based localization for sparse 3-D sensor networks</span>
-                <span class="pub-venue">IEEE Internet of Things Journal</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, B. Ding, S. Guo, and K. Wang.
+                <span class="pub-venue">IEEE IoT Journal</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, B. Ding, S. Guo, and K. Wang.
             </div>
         </div>
 
         <h3>Data Security & Intelligent Systems</h3>
         <div class="pub-list">
             <div class="pub-item">
+                <span class="pub-year-label">[2023]</span>
                 <span class="pub-title">Enhanced federated learning for edge data security in intelligent transportation systems</span>
-                <span class="pub-venue">IEEE Transactions on Intelligent Transportation Systems</span>. R. Zhu, M. Li, <span class="author-self">J. Yin</span>, L. Sun, and H. Liu.
+                <span class="pub-venue">IEEE TITS</span>. R. Zhu, M. Li, <span class="author-self">J. Yin</span>, L. Sun, and H. Liu.
             </div>
             <div class="pub-item">
-                <span class="pub-title">Adaptive multi-source data fusion vessel trajectory prediction model for intelligent maritime traffic</span>
+                <span class="pub-title"><span class="pub-year-label">[2023]</span> Adaptive multi-source data fusion vessel trajectory prediction model for intelligent maritime traffic</span>
                 <span class="pub-venue">Knowledge-Based Systems</span>. Y. Xiao, X. Li, <span class="author-self">J. Yin</span>, W. Liang, and Y. Hu.
             </div>
             <div class="pub-item">
+                <span class="pub-year-label">[2018]</span>
                 <span class="pub-title">Mosaic secret-fragment-visible data hiding for secure image transmission based on two-step energy matching</span>
                 <span class="pub-venue">Digital Signal Processing</span>. <span class="author-self">J. Yin</span>, B. Ou, X. Liu, and F. Peng.
             </div>
@@ -226,8 +278,8 @@
         <section>
             <h2>🏅 Honors</h2>
             <ul style="padding-left: 20px; font-size: 0.95rem;">
-                <li>National Scholarship for Doctoral Students</li>
-                <li>Chutian Scholar Program, Hubei Province</li>
+                <li>National Scholarship for Doctoral Students (国家奖学金)</li>
+                <li>Chutian Scholar Program, Hubei Province (湖北省楚天学者)</li>
             </ul>
         </section>
     </div>

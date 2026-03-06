@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jiangjin Yin - Homepage</title>
     <style>
         :root {
-            --primary-color: #003366; /* 经典学术深蓝 */
+            --primary-color: #003366; 
             --secondary-color: #555;
-            --accent-color: #e67e22; /* 强调色 */
+            --accent-color: #27ae60; 
+            --highlight-color: #e67e22;
             --bg-color: #fafafa;
             --card-bg: #ffffff;
         }
@@ -17,15 +18,15 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: #333;
-            line-height: 1.7;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 0 25px;
         }
 
         header {
@@ -34,126 +35,212 @@
             margin-bottom: 30px;
         }
 
-        h1 { color: var(--primary-color); margin-bottom: 10px; }
+        .header-content h1 { color: var(--primary-color); margin: 0 0 10px 0; font-size: 2.2rem; }
+        .title-badge { 
+            background: var(--primary-color); 
+            color: white; 
+            padding: 2px 10px; 
+            border-radius: 4px; 
+            font-size: 0.85rem;
+            margin-right: 8px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         h2 { 
             color: var(--primary-color); 
-            font-size: 1.5rem; 
+            font-size: 1.6rem; 
             border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
             margin-top: 40px;
         }
+
+        h3 { color: var(--secondary-color); font-size: 1.2rem; margin: 25px 0 15px 0; border-left: 4px solid var(--accent-color); padding-left: 10px;}
 
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* News Section */
-        .news-list { list-style: none; padding: 0; }
-        .news-list li { margin-bottom: 12px; padding-left: 15px; border-left: 3px solid var(--accent-color); }
-        .date-tag { font-weight: bold; color: var(--secondary-color); margin-right: 10px; }
-
-        /* Experience Section */
+        .exp-list { list-style: none; padding: 0; }
         .exp-item {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        .exp-date { width: 180px; font-weight: 600; color: var(--secondary-color); flex-shrink: 0; }
-        .exp-content { display: flex; align-items: center; }
-        .logo { height: 24px; margin-right: 12px; }
-
-        /* Publication Section */
-        .pub-card {
-            background: var(--card-bg);
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid #eee;
             margin-bottom: 15px;
         }
-        .pub-title { font-weight: bold; color: var(--primary-color); display: block; margin-bottom: 5px; }
-        .pub-venue { color: #d35400; font-weight: 600; font-style: italic; }
-        .author-self { text-decoration: underline; font-weight: 600; }
+        .exp-date { width: 220px; font-weight: bold; color: var(--secondary-color); flex-shrink: 0; }
 
-        /* Services & Awards */
-        .grid-section { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .pub-list { padding-left: 0; list-style: none; }
+        .pub-item {
+            padding: 12px 15px;
+            border-radius: 6px;
+            background: var(--card-bg);
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            border: 1px solid #eee;
+        }
+        .pub-item:hover { border-color: var(--accent-color); }
+        .pub-title { font-weight: 600; color: #222; display: block; margin-bottom: 4px; }
+        .pub-venue { color: #d35400; font-weight: 500; font-style: italic; }
+        .author-self { text-decoration: underline; font-weight: bold; }
+
+        .grid-section { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
         @media (max-width: 768px) {
-            .grid-section { grid-template-columns: 1fr; gap: 20px; }
             .exp-item { flex-direction: column; }
-            .exp-date { margin-bottom: 5px; }
+            .exp-date { width: 100%; margin-bottom: 5px; }
+            .grid-section { grid-template-columns: 1fr; }
         }
 
-        footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.9rem; }
+        footer { text-align: center; padding: 60px 0; color: #999; font-size: 0.9rem; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Jiangjin Yin (尹江津)</h1>
-        <p>
-            Assistant Professor at the <a href="#">School of Artificial Intelligence, Shandong University</a>, 
-            and a member of the <a href="#">General Artificial Intelligence Laboratory (SDU GAIL)</a>.
-        </p>
-        <p><strong>Research Interests:</strong> Reinforcement Learning, Multi-agent Systems, and LLM Agents.</p>
-        <p><strong>Email:</strong> <a href="mailto:zhiwei_xu@sdu.edu.cn">zhiwei_xu@sdu.edu.cn</a></p>
+        <div class="header-content">
+            <h1>Jiangjin Yin (尹江津)</h1>
+            <div style="margin-bottom: 15px;">
+                <span class="title-badge">Chutian Scholar of Hubei Province</span>
+                <span class="title-badge">Ph.D. Supervisor</span>
+            </div>
+            <p style="font-size: 1.1rem; margin: 5px 0;">
+                Associate Professor, <strong>College of Informatics, Huazhong Agricultural University</strong><br>
+                Deputy Director, <strong>Hubei Agricultural Big Data Research Center</strong>
+            </p>
+            <p><strong>Research Interests:</strong> Reinforcement Learning (RL), Multi-agent Systems (MAS), LLM Agents, RFID Sensing & IoT</p>
+            <p><strong>Email:</strong> <a href="mailto:zhiwei_xu@sdu.edu.cn">zhiwei_xu@sdu.edu.cn</a></p>
+        </div>
     </header>
 
     <section>
         <h2>🔥 News</h2>
-        <ul class="news-list">
-            <li><span class="date-tag">2026.02</span> One paper accepted to <strong>ICAPS 2026</strong>! 🎉</li>
-            <li><span class="date-tag">2026.01</span> One first-author paper accepted to <strong>ICLR 2026</strong>!</li>
-            <li><span class="date-tag">2025.12</span> One paper accepted to <strong>AAMAS 2026</strong>!</li>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 10px; padding-left: 15px; border-left: 3px solid var(--highlight-color);">
+                One paper accepted to <strong>ICAPS 2026</strong>! 🎉
+            </li>
+            <li style="margin-bottom: 10px; padding-left: 15px; border-left: 3px solid var(--highlight-color);">
+                One first-author paper accepted to <strong>ICLR 2026</strong>!
+            </li>
         </ul>
     </section>
 
     <section>
         <h2>📖 Experience</h2>
-        <div class="exp-item">
-            <span class="exp-date">2024.07 - Present</span>
-            <div class="exp-content">
-                <img src="sdu_logo.png" alt="SDU" class="logo">
-                <span>Assistant Professor, <strong>Shandong University</strong></span>
-            </div>
-        </div>
-        <div class="exp-item">
-            <span class="exp-date">2019.09 - 2024.06</span>
-            <div class="exp-content">
-                <img src="cas_logo.png" alt="CAS" class="logo">
-                <span>Ph.D., <strong>Institute of Automation, CAS</strong>. Advisor: Prof. Guoliang Fan</span>
-            </div>
-        </div>
+        <ul class="exp-list">
+            <li class="exp-item">
+                <span class="exp-date">2022.12 - Present</span>
+                <span>Associate Professor / Ph.D. Supervisor, <strong>Huazhong Agricultural University</strong></span>
+            </li>
+            <li class="exp-item">
+                <span class="exp-date">2015.09 - 2021.11</span>
+                <span>Ph.D. in Computer Science, <strong>Hunan University</strong></span>
+            </li>
+            <li class="exp-item">
+                <span class="exp-date">2011.09 - 2015.07</span>
+                <span>B.S. in Computer Science, <strong>Guilin University of Electronic Technology</strong></span>
+            </li>
+        </ul>
     </section>
 
     <section>
-        <h2>📝 Selected Publications</h2>
-        <div class="pub-card">
-            <span class="pub-title">QSIM: Mitigating Overestimation in Multi-Agent Reinforcement Learning via Action Similarity Weighted Q-Learning</span>
-            <span class="pub-venue">ICAPS 2026</span>. Yuanjun Li, Bin Zhang, ..., <span class="author-self">Zhiwei Xu</span>.
-            <div style="margin-top: 8px;">
-                [<a href="#">Arxiv</a>] [<a href="#">Code</a>]
+        <h2>📝 Publications</h2>
+        
+        <h3>Reinforcement Learning & AI Agents</h3>
+        <div class="pub-list">
+            <div class="pub-item">
+                <span class="pub-title">QSIM: Mitigating Overestimation in Multi-Agent Reinforcement Learning via Action Similarity Weighted Q-Learning</span>
+                <span class="pub-venue">ICAPS</span>. Y. Li, B. Zhang, H. Chen, Z. Jiang, D. Li, and <span class="author-self">J. Yin</span>.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Reidentify: Context-Aware Identity Generation for Contextual Multi-Agent Reinforcement Learning</span>
+                <span class="pub-venue">ICML</span>. Z. Xu, K. Hu, X. Xin, W. Meng, Y. Shi, H. Mao, B. Zhang, D. Li, and <span class="author-self">J. Yin</span>.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Ngent: Next-generation ai agents must integrate multi-domain abilities to achieve artificial general intelligence</span>
+                <span class="pub-venue">arXiv preprint</span>. Z. Li, H. Mao, <span class="author-self">J. Yin</span>, M. Xing, Z. Xu, Y. Zhang, and Y. Xiao.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Beyond local views: Global state inference with diffusion models for cooperative multi-agent reinforcement learning</span>
+                <span class="pub-venue">arXiv preprint</span>. Z. Xu, H. Mao, N. Zhang, X. Xin, P. Ren, D. Li, B. Zhang, G. Fan, Z. Chen, and <span class="author-self">J. Yin</span>.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Pdit: Interleaving perception and decision-making transformers for deep reinforcement learning</span>
+                <span class="pub-venue">arXiv preprint</span>. H. Mao, R. Zhao, Z. Li, Z. Xu, H. Chen, Y. Chen, B. Zhang, Z. Xiao, J. Zhang, and <span class="author-self">J. Yin</span>.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Robust multi-agent reinforcement learning for noisy environments</span>
+                <span class="pub-venue">Peer-to-Peer Networking and Applications</span>. X. Chen, X. Liu, C. Luo, and <span class="author-self">J. Yin</span>.
             </div>
         </div>
-        </section>
+
+        <h3>RFID Systems & IoT</h3>
+        <div class="pub-list">
+            <div class="pub-item">
+                <span class="pub-title">Efficient missing key tag identification in large-scale RFID systems: An iterative verification and selection method</span>
+                <span class="pub-venue">IEEE Transactions on Mobile Computing (TMC)</span>. <span class="author-self">J. Yin</span>, X. Xie, H. Mao, and S. Guo.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Parallel Missing Tag Identification for Anonymous Multiple Users RFID Systems</span>
+                <span class="pub-venue">IEEE SECON</span>. <span class="author-self">J. Yin</span>, H. Mao, R. Zhu, and S. Xu.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Receive only necessary: Efficient tag category identification in large-scale RFID systems</span>
+                <span class="pub-venue">IEEE Transactions on Mobile Computing (TMC)</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, K. Li, and S. Guo.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Time efficient tag searching in large-scale RFID systems: A compact exclusive validation method</span>
+                <span class="pub-venue">IEEE Transactions on Mobile Computing (TMC)</span>. X. Liu, <span class="author-self">J. Yin</span>, J. Liu, S. Zhang, and B. Xiao.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Time-efficient target tags information collection in large-scale RFID systems</span>
+                <span class="pub-venue">IEEE Transactions on Mobile Computing (TMC)</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, B. Xiao, and B. Ou.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Vital signs monitoring with RFID: Opportunities and challenges</span>
+                <span class="pub-venue">IEEE Network</span>. X. Liu, <span class="author-self">J. Yin</span>, Y. Liu, S. Zhang, S. Guo, and K. Wang.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Range-based localization for sparse 3-D sensor networks</span>
+                <span class="pub-venue">IEEE Internet of Things Journal</span>. X. Liu, <span class="author-self">J. Yin</span>, S. Zhang, B. Ding, S. Guo, and K. Wang.
+            </div>
+        </div>
+
+        <h3>Data Security & Intelligent Systems</h3>
+        <div class="pub-list">
+            <div class="pub-item">
+                <span class="pub-title">Enhanced federated learning for edge data security in intelligent transportation systems</span>
+                <span class="pub-venue">IEEE Transactions on Intelligent Transportation Systems</span>. R. Zhu, M. Li, <span class="author-self">J. Yin</span>, L. Sun, and H. Liu.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Adaptive multi-source data fusion vessel trajectory prediction model for intelligent maritime traffic</span>
+                <span class="pub-venue">Knowledge-Based Systems</span>. Y. Xiao, X. Li, <span class="author-self">J. Yin</span>, W. Liang, and Y. Hu.
+            </div>
+            <div class="pub-item">
+                <span class="pub-title">Mosaic secret-fragment-visible data hiding for secure image transmission based on two-step energy matching</span>
+                <span class="pub-venue">Digital Signal Processing</span>. <span class="author-self">J. Yin</span>, B. Ou, X. Liu, and F. Peng.
+            </div>
+        </div>
+    </section>
 
     <div class="grid-section">
         <section>
             <h2>💻 Academic Services</h2>
             <p style="font-size: 0.95rem;">
                 <strong>PC Member / Reviewer:</strong><br>
-                NeurIPS, ICLR, ICML, AAAI, IJCAI, AAMAS.
+                NeurIPS, ICLR, ICML, AAAI, IJCAI, AAMAS, IEEE TMC, IEEE IoT-J, IEEE TITS, etc.
             </p>
         </section>
         <section>
             <h2>🏅 Honors</h2>
             <ul style="padding-left: 20px; font-size: 0.95rem;">
-                <li>2025: Excellent PhD Thesis Award (Runner-up)</li>
-                <li>2023: National Scholarship (Doctoral)</li>
+                <li>Excellent PhD Dissertation Nomination, Agents and Multi-Agent Systems Technical Group, CCF-AI</li>
+                <li>National Scholarship for Doctoral Students</li>
+                <li>Chutian Scholar Program, Hubei Province</li>
             </ul>
         </section>
     </div>
 
     <footer>
-        &copy; 2026 Zhiwei Xu | Updated: Mar 2026
+        &copy; 2026 Jiangjin Yin | Last Updated: Mar 2026
     </footer>
 </div>
 
